@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="LEGO" content="LEGO">
+    <title>Immersive LEGO</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid text-center">    
+      <div class="row">
+        <div class="col-sm-9 img-content"> 
+          <div class=""></div>
+        </div>
+        <div class="col-sm-3 sidenav backgroundColor">   
+          <ul class="nav nav-tabs ">
+            <li class="active"><a data-toggle="tab" href="#manual">Manual Mode</a></li>
+            <li><a data-toggle="tab" href="#ai">AI Mode</a></li>
+          </ul>
+          
+          <div class="tab-content">
+            <div id="manual" class="tab-pane fade in active">
+              <h3>Manual Mode</h3>
+              <p>Please select following items</p>
+              <hr>
+              <div style="overflow-y:scroll; overflow-x:hidden; height: 50vh;">
+                <h5>Choose image</h5> 
+                <input type="file" class="form-control"/>
+                <hr>
+                <h5>Select Grid</h5>
+                <select class="form-control">
+                  <option>8 X 8</option>
+                  <option>16 X 16</option>
+                  <option>24 X 24</option>
+                  <option>32 X 32</option>
+                  <option>48 X 48</option>
+                </select> 
+                <hr>
+                 <h5>Select Bricks</h5>
+                 <div id ="legoContainer"></div>
+                <hr>
+                 <h5>Select LEGO Color</h5>
+                <div id="colorContainer"></div>
+                
+              </div>
+              <hr>
+              <button type="button" class="btn btn-primary">Apply</button>
+              <button type="button" class="btn btn-success">Download</button>
+           
+            </div>
+            <div id="ai" class="tab-pane fade">
+              <h3>AI Mode</h3>
+              <p>Please insert your text prompts</p>
+              <hr>
+              <div class="form-group">
+                <label for="comment">prompts:</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+                <hr>
+                <hr>
+                 <h5>Select Bricks</h5>
+                 <div id="legoContainer1" ></div>
+                <hr>
+                <button type="button" class="btn btn-primary">Generate</button>
+                <button type="button" class="btn btn-success">Download</button>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+   </body>
+</html>

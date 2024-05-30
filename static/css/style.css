@@ -1,0 +1,65 @@
+.img-content {
+    margin: 0;   
+    height: 100%;
+    min-height: 100vh; /* fallback for Viewport Height */
+    background-color: rgb(22, 20, 20) !important;
+}
+.backgroundColor {
+    background-color: salmon !important;
+    height: 100%;
+    padding-top: 5vh;
+    
+}
+.sidenav-left {
+    width: 5%;
+    padding-top: 20px;
+    margin: 0;
+ 
+    background-color: #f1f1f1;
+    height: 100%;
+}
+  
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: 100%;
+        padding: 10px;
+    }
+    .row.content {height:auto;} 
+}
+
+#colorContainer {
+    display: grid;
+    border: 3px solid #0f0f0f;
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1px;
+  }
+  
+.colorCard {
+    height: 30px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+#legoContainer {
+    display: grid;
+    border: 3px solid #9ef005;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1px;
+}
+#legoContainer1 {
+    display: grid;
+    border: 3px solid #9ef005;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1px;
+}
+
+.legoCard {
+    height: 80px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
